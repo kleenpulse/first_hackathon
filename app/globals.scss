@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,600;1,700&family=Unica+One&display=swap");
+@import url("https://fonts.cdnfonts.com/css/made-tommy-outline");
+@import url("https://fonts.cdnfonts.com/css/typo-hoop-demo");
+@import url("https://fonts.cdnfonts.com/css/voces");
+@import url("https://fonts.cdnfonts.com/css/volkhov");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: "Clash Display", sans-serif;
+	scroll-behavior: smooth;
+}
+body {
+	overflow-x: hidden;
+	background: #a7ff03e8;
+}
+
+.show-menu {
+	animation: show-menu 1s ease forwards;
+	@keyframes show-menu {
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+.perspective {
+	perspective: 1000px;
+}
+.rotate-bounce {
+	animation: rotate360 2s linear infinite;
+}
+
+@keyframes rotate360 {
+	0% {
+		transform: rotateY(0deg); /* Use rotateZ for 3D rotation on Z-axis */
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: rotateY(360deg); /* Rotate 360 degrees on Z-axis */
+	}
+}
+.max-container {
+	max-width: 1440px;
+}
+
+.nav-gradient {
+	background: linear-gradient(-45deg, #903aff, #fe34b9, #0080ff);
+}
+
+.btn-gradient {
+	background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+}
+.timeline-gradient {
+	background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
+}
+
+.bg-hero-man {
+	background: url("/assets/bubble.png") no-repeat bottom 80px right 70px;
+
+	background-blend-mode: normal, color;
+	background-size: contain;
+	@media (max-width: 1043px) {
+		background: url("/assets/bubble.png") no-repeat bottom 30px right 70px;
+		background-size: contain;
+	}
+}
+.purple-glow {
+	background: radial-gradient(circle, rgb(88, 10, 212) 10%, #7f29b951 100%);
+	height: 300px;
+	width: 300px;
+	filter: blur(190px);
+	border-radius: 50%;
+
+	background-blend-mode: difference, luminosity;
+}
+.bg-metrix {
+	background: url("/assets/metrix-1.png") no-repeat top right;
+
+	background-blend-mode: normal, color;
+	background-size: contain;
+}
+
+.hero-section {
+	overflow: hidden !important;
+	width: 100%;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		width: 550px;
+		height: 550px;
+		border-radius: 50%;
+		filter: blur(120px);
+		background: radial-gradient(circle, rgb(91, 20, 158) 10%, #150e28 100%);
+		background-blend-mode: hard-light;
+		@media (max-width: 1043px) {
+			width: 250px;
+			height: 250px;
+			top: 10rem;
+			filter: blur(90px);
+			left: -2rem;
+			background-blend-mode: normal;
+			background: radial-gradient(circle, rgb(128, 40, 211) 10%, #150e28 100%);
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 20%;
+		right: 5%;
+		width: 550px;
+		height: 550px;
+		border-radius: 50%;
+		filter: blur(120px);
+		background: radial-gradient(circle, rgb(91, 20, 158) 10%, #150e28 100%);
+		background-blend-mode: hard-light;
+		@media (max-width: 1043px) {
+			opacity: 0;
+		}
+	}
+}
+.bg-section {
+	overflow: hidden !important;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -10%;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		filter: blur(120px);
+		background: radial-gradient(circle, rgb(74, 13, 131) 10%, #150e28 100%);
+		background-blend-mode: hard-light;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -10rem;
+		right: -10%;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		filter: blur(150px);
+		background: radial-gradient(circle, rgb(80, 15, 141) 10%, #150e28 100%);
+		background-blend-mode: hard-light;
+	}
+}
+
+.bg-privacy {
+	overflow: hidden;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: -10%;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		filter: blur(100px);
+		background: radial-gradient(circle, rgb(90, 22, 153) 10%, #150e28 100%);
+		background-blend-mode: hard-light;
+	}
+}
+
+.brand-logo {
+	height: 150px;
+	&:nth-child(1),
+	&:nth-child(2),
+	&:nth-child(3) {
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 4px;
+			background: #d434fe;
+		}
+	}
+	&:nth-child(1),
+	&:nth-child(2),
+	&:nth-child(4),
+	&:nth-child(5) {
+		&::after {
+			content: "";
+			position: absolute;
+			right: -6.5rem;
+			top: 2.5rem;
+			height: 4px;
+			transform: rotate(90deg);
+			background: #d434fe;
+			width: 150px;
+		}
+	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background: #150e28;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(170, 113, 245);
+	border-radius: 9px;
+}
