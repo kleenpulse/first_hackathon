@@ -20,6 +20,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployed on Vercel
 
-Check out the live url on [VERCEL](https://vxrcel-hacks.vercel.app).
+Check out the live url on [VERCEL](https://vxrcel-hax.vercel.app).
 
 Check out [Next.js](https://nextjs.org/docs) documentation to get started it pure genius.

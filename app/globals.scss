@@ -25,6 +25,24 @@ body {
 		}
 	}
 }
+.in-view {
+	opacity: 0;
+	animation: in-view 1s 0.5s ease-in forwards;
+	@keyframes in-view {
+		100% {
+			opacity: 1;
+		}
+	}
+}
+.not-in-view {
+	opacity: 1;
+	animation: not-view 1s 0.3s ease forwards;
+	@keyframes not-view {
+		100% {
+			opacity: 0;
+		}
+	}
+}
 
 .perspective {
 	perspective: 1000px;
@@ -54,6 +72,12 @@ body {
 
 .btn-gradient {
 	background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+	transition: background 0.5s ease;
+	&:hover {
+		background: linear-gradient(45deg, #903aff, #fe34b9, #00f2ff);
+
+		transition: background 0.5s ease;
+	}
 }
 .timeline-gradient {
 	background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);

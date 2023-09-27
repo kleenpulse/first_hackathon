@@ -12,7 +12,7 @@ export const Sponsors = () => {
 						companies as its partners and sponsors
 					</p>
 				</div>
-				<div className="flex justify-center items-center  w-full xl:max-[1255px] sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:place-items-center  border border-primary p-8 lg:p-16 sm:gap-10 lg:gap-16 mt-8 lg:mt-16 lg:py-28">
+				<div className=" justify-center items-center  w-full xl:max-w-[1255px] grid grid-cols-3 place-items-center  border border-primary p-8 lg:p-16 sm:gap-10 lg:gap-16 mt-8 lg:mt-16 lg:py-28">
 					<div className="flex py-4 brand-logo relative  justify-center items-center w-full ">
 						<Image
 							src={"/assets/brands/brand-liberty.png"}
@@ -28,7 +28,7 @@ export const Sponsors = () => {
 							alt="judging"
 							width={500}
 							height={500}
-							className=" scale-95"
+							className=" w-1/2 max-w-[130px]"
 						/>
 					</div>
 					<div className="flex py-4 brand-logo relative  justify-center items-center w-full">
@@ -37,7 +37,7 @@ export const Sponsors = () => {
 							alt="judging"
 							width={500}
 							height={500}
-							className="w-1/2 max-w-[130px]"
+							className="w-1/2 max-w-[130px] max-lg:max-w-[100px]"
 						/>
 					</div>
 					<div className="flex py-4 brand-logo relative  justify-center items-start w-full">
@@ -49,15 +49,15 @@ export const Sponsors = () => {
 							className="w-1/2 max-w-[130px]"
 						/>
 					</div>
-					<div className="flex py-4 brand-logo relative  justify-center items-start w-full">
-						<h1 className="text-[50px] font-typoHoop text-white font-medium">
+					<div className="flex py-4 brand-logo relative  justify-center items-center w-full">
+						<h1 className="lg:text-[50px] text-[40px] font-typoHoop text-white font-medium">
 							Pay<span className="font-typoHoop text-[#00a3ff]">box</span>
 						</h1>
 					</div>
-					<div className="flex py-4 brand-logo justify-center items-start w-full ">
-						<h1 className="text-[40px] font-voces text-white font-medium relative">
+					<div className="flex py-4 brand-logo justify-center items-center w-full ">
+						<h1 className="lg:text-[40px] md:text-[30px] font-voces text-white font-medium relative">
 							Vuzual <span className="font-volkhov text-[#f00]">Plus</span>
-							<p className="text-[11px] font-voces text-white/90 font-normal absolute right-0 bottom-0">
+							<p className="lg:text-[11px] text-[8px] font-voces text-white/90 font-normal absolute right-0 bottom-0">
 								Design Studios
 							</p>
 						</h1>
