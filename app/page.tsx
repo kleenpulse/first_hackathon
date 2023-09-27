@@ -47,7 +47,7 @@ export default function Home() {
 			<section className="bg-section bg-[#100B20] relative flex  w-full justify-center items-center h-full lg:h-[945px] border-b border-gray-600 z-10">
 				<Rewards />
 			</section>
-			<section className="bg-section relative flex  w-full justify-center items-center min-h-screen  border-b border-gray-600 z-10">
+			<section className="bg-section relative flex  w-full justify-center items-center   border-b border-gray-600 z-10">
 				<Sponsors />
 			</section>
 			<section className="bg-privacy relative flex  w-full justify-center items-center min-h-screen  border-b border-gray-600 z-10">

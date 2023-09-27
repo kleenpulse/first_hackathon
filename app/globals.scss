@@ -201,10 +201,18 @@ body {
 		&::before {
 			content: "";
 			position: absolute;
-			bottom: 0;
+			bottom: -2rem;
 			width: 100%;
 			height: 4px;
 			background: #d434fe;
+			@media screen and (max-width: 1043px) {
+				bottom: -1rem;
+				width: 80%;
+			}
+			@media screen and (max-width: 450px) {
+				bottom: -0.5rem;
+				width: 50%;
+			}
 		}
 	}
 	&:nth-child(1),
@@ -214,12 +222,21 @@ body {
 		&::after {
 			content: "";
 			position: absolute;
-			right: -6.5rem;
-			top: 2.5rem;
+			right: -6rem;
+			top: 4.5rem;
 			height: 4px;
 			transform: rotate(90deg);
 			background: #d434fe;
-			width: 150px;
+			width: 130px;
+
+			@media screen and (max-width: 1043px) {
+				right: -4.1rem;
+				width: 100px;
+			}
+			@media screen and (max-width: 450px) {
+				width: 60px;
+				right: -2.1rem;
+			}
 		}
 	}
 }

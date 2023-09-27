@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useMemo, RefObject } from "react";
+import { useEffect, useState, useMemo, RefObject, useRef } from "react";
 
 type UseInView = <T extends Element>(ref: RefObject<T>) => boolean;
 
