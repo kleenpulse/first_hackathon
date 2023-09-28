@@ -4,8 +4,8 @@ import Button from "../btn/Button";
 
 export const PrivacyPolicy = () => {
 	return (
-		<div className="flex justify-center w-full items-center py-20 relative z-10 ">
-			<div className="flex justify-center gap-8 lg:gap-16 xl:gap-28 w-full items-center max-container sm:px-12 relative">
+		<div className="flex justify-center w-full items-center lg:py-20 py-10 relative z-10 ">
+			<div className="flex max-lg:flex-col justify-center gap-8 lg:gap-16 xl:gap-28 w-full items-center max-container sm:px-12 relative">
 				<div className="flex justify-center items-center  w-full max-lg:mx-4">
 					<div className="flex flex-col justify-center items-start ">
 						<div className="flex flex-col mb-8 lg:mb-16">
@@ -62,12 +62,20 @@ export const PrivacyPolicy = () => {
 						</div>
 					</div>
 				</div>
-				<div className="flex w-full justify-center flex-col items-center ">
+				<div className="flex w-full max-lg:max-w-[600px] max-w-[400px]  lg:p-6 p-2 relative items-start justify-center h-full max-sm:min-h-[600px] min-h-[800px]  ">
+					<Image
+						src={"/assets/lock-icon.svg"}
+						alt="judging"
+						width={400}
+						height={400}
+						className=" scale-75 sm:scale-90 lg:hidden"
+					/>
 					<Image
 						src={"/assets/illustrations/privacy.png"}
 						alt="judging"
-						width={800}
-						height={800}
+						width={500}
+						height={500}
+						className="absolute z-10 max-sm:w-[300px] bottom-0 "
 					/>
 				</div>
 				<Image
@@ -75,7 +83,7 @@ export const PrivacyPolicy = () => {
 					alt="judging"
 					width={400}
 					height={400}
-					className="absolute top-1 right-6"
+					className="absolute top-1 right-6 max-lg:hidden"
 				/>
 			</div>
 		</div>
