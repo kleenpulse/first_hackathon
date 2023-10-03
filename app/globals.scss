@@ -8,13 +8,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@mixin hover-link {
+	background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 500;
+}
+@mixin nav-gradient {
+	background: linear-gradient(45deg, #9626ff, #fe34b9, #00ffd9);
+}
 * {
 	font-family: "Clash Display", sans-serif;
 	scroll-behavior: smooth;
 }
 body {
 	overflow-x: hidden;
-	background: #a7ff03e8;
+	background: #000;
+}
+.register {
+	@include nav-gradient();
+}
+a.links:hover {
+	@include hover-link;
+}
+a.main:hover {
+	font-weight: 700;
+}
+.active-link {
+	@include hover-link;
 }
 
 .show-menu {
@@ -67,7 +89,7 @@ body {
 }
 
 .nav-gradient {
-	background: linear-gradient(-45deg, #903aff, #fe34b9, #0080ff);
+	@include nav-gradient;
 }
 
 .btn-gradient {
@@ -176,6 +198,38 @@ body {
 		background-blend-mode: hard-light;
 	}
 }
+::placeholder {
+	color: rgba(255, 255, 255, 0.799) !important;
+	padding: 1rem;
+}
+
+.contact-section {
+	overflow-x: hidden !important;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 5%;
+		left: -10%;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		filter: blur(120px);
+		background: radial-gradient(circle, rgb(74, 13, 131) 10%, #150e28 100%);
+		background-blend-mode: hard-light;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		filter: blur(100px);
+		background: radial-gradient(circle, rgb(80, 15, 141) 10%, #150e28 100%);
+		background-blend-mode: hard-light;
+	}
+}
 
 .bg-privacy {
 	overflow: hidden;
@@ -249,4 +303,9 @@ body {
 ::-webkit-scrollbar-thumb {
 	background: rgb(170, 113, 245);
 	border-radius: 9px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }

@@ -4,13 +4,13 @@ import React from "react";
 
 export const Foobar = () => {
 	return (
-		<div className="flex flex-col justify-center w-full items-center py-20 relative ">
+		<div className="flex flex-col justify-center w-full items-center py-20 relative px-8 sm:px-16 lg:px-2">
 			<div className="max-lg:flex-col flex w-full gap-10 lg:gap-16 xl:justify-between max-container justify-center">
 				<div className="flex flex-col">
 					<p className="text-3xl  font-bold text-white mb-4">
 						get<span className="text-primary">linked</span>
 					</p>
-					<p className="font-montserrat text-[14px] text-white w-full max-w-[346px] lg:max-w-[446px]">
+					<p className="font-montserrat text-[14px] text-white w-full max-w-[346px] lg:max-w-[446px] leading-8 lg:leading-none">
 						Getlinked Tech Hackathon is a technology innovation program
 						established by a group of organizations with the aim of showcasing
 						young and talented individuals in the field of technology

@@ -22,7 +22,7 @@ export const PrivacyPolicy = () => {
 							</p>
 						</div>
 						<div className="flex flex-col">
-							<div className="flex flex-col p-8 lg:p-12 bg-[#d9d9d909]  text-white text-[14px] font-montserrat tracking-wide leading-7 w-full backdrop-blur-xl border border-primary rounded ">
+							<div className="flex flex-col p-8 lg:p-12 bg-[#d9d9d909]  text-white text-[14px] font-montserrat tracking-wide leading-7 w-full backdrop-blur-xl border border-primary rounded max-w-[569px]">
 								<p>
 									At getlinked tech Hackathon 1.0, we value your privacy and are
 									committed to protecting your personal information. This

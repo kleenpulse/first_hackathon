@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<main className="bg-secondary flex flex-col w-full ">
 			<section className="min-[1043px]:min-h-screen hero-section relative flex flex-col  w-full justify-center items-center h-full">
-				<div className="w-full border-b border-primary/20 flex justify-center relative z-30">
+				<div className="w-full border-b border-primary/20 flex justify-center fixed top-0 z-30 backdrop-blur-xl">
 					<Nav />
 				</div>
 

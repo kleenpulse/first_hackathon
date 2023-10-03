@@ -3,7 +3,7 @@ import Button from "../btn/Button";
 
 export const Hero = () => {
 	return (
-		<div className="flex flex-1 max-[1043px]:flex-col max-[1043px]:justify-between w-full max-container justify-center z-10  relative h-full min-[1440px]:px-0 px-2 sm:px-8">
+		<div className="flex flex-1 max-[1043px]:flex-col max-[1043px]:justify-between w-full max-container justify-center z-10  relative h-full min-[1440px]:px-0 px-2 sm:px-8 mt-32">
 			<div className="flex flex-col w-full justify-center gap-8  max-[1043px]:items-center ">
 				<div className="flex relative z-10 min-[1043px]:hidden mb-16 py-6">
 					<p className="text-white text-[17px] sm:text-[28px] italic font-bold font-montserrat">

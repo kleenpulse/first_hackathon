@@ -1,19 +1,19 @@
 export const navLinks: { title: string; tag: string }[] = [
 	{
 		title: "Timeline",
-		tag: "#timeline",
+		tag: "/#timeline",
 	},
 	{
 		title: "Overview",
-		tag: "#overview",
+		tag: "/#overview",
 	},
 	{
 		title: "FAQs",
-		tag: "#faqs",
+		tag: "/#faqs",
 	},
 	{
 		title: "Contact",
-		tag: "#contact",
+		tag: "/contact?path=contact",
 	},
 ];
 
