@@ -23,7 +23,7 @@ const ContactPage = ({
 	};
 
 	return (
-		<main className="bg-[#100B20] min-h-screen flex flex-col w-full contact-section items-center justify-center relative">
+		<main className="bg-[#100B20] min-h-screen flex-1 flex  w-full contact-section items-center justify-center relative sm:pt-[10rem] pt-20">
 			<div className="w-full border-b border-primary/20 flex justify-center absolute top-0 z-30">
 				<Nav path={path} pathname={pathname} />
 			</div>

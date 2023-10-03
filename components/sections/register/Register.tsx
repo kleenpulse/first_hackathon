@@ -94,14 +94,8 @@ const Register = () => {
 					route.refresh();
 				}, 1000);
 			}
-			console.log(isResult);
-			console.log(isError, "=========", Object.keys(isResult).length);
 		}
 	};
-	if (isResult.length > 0) {
-		console.log(formData);
-		console.log(isResult);
-	}
 
 	return (
 		<>
@@ -116,8 +110,8 @@ const Register = () => {
 				/>
 			)}
 			<div className="h-full items-center justify-center w-full flex px-4 sm:px-10 lg:px-16 relative z-10 ">
-				<div className="flex justify-center lg:justify-between w-full h-full items-center max-container max-lg:flex-col mt-10 md:mt-0 pb-12 lg:pb-0">
-					<div className="flex lg:w-[85%] w-1/2 sm:mt-10 mt-12 max-sm:mb-2  lg:mt-0">
+				<div className="flex justify-center lg:justify-between w-full h-full items-center max-container max-lg:flex-col  pb-12 lg:pb-0">
+					<div className="flex lg:w-[85%] w-1/2  max-sm:mb-2  ">
 						<Image
 							src="/assets/illustrations/register-illustration.png"
 							alt="illustration"
@@ -129,7 +123,7 @@ const Register = () => {
 						/>
 					</div>
 					<div className="flex w-full justify-center  ">
-						<div className="flex flex-col sm:p-6 xl:p-16 md:bg-[#d9d9d909]  font-montserrat tracking-wide w-full backdrop-blur-xl rounded-lg max-w-[750px] md:shadow-lg gap-6 lg:gap-10">
+						<div className="flex flex-col sm:p-6 xl:p-16 md:bg-[#d9d9d909]  font-montserrat tracking-wide w-full backdrop-blur-xl rounded-lg max-w-[750px] md:shadow-lg gap-4 sm:gap-6 lg:gap-10">
 							<h1 className="text-primary font-semibold text-[17px] lg:text-[25px]">
 								Register
 							</h1>
@@ -151,10 +145,10 @@ const Register = () => {
 
 							<form
 								onSubmit={handleSubmit}
-								className="w-full flex flex-col gap-10 items-center text-white "
+								className="w-full flex flex-col gap-4 sm:gap-10 items-center text-white "
 								id="register-form"
 							>
-								<div className="flex  flex-col sm:grid sm:grid-cols-2 w-full gap-10">
+								<div className="flex  flex-col sm:grid sm:grid-cols-2 w-full gap-4 sm:gap-10">
 									<label htmlFor="team">
 										Team's Name
 										<input
@@ -279,12 +273,12 @@ const Register = () => {
 										/>
 									</label>
 								</div>
-								<div className="flex w-full flex-col gap-2">
-									<p className="text-darkPink font-montserrat text-[12px] italic font-normal tracking-wide">
+								<div className="flex w-full flex-col gap-2 max-sm:items-center">
+									<p className="text-darkPink font-montserrat text-[10px] sm:text-[12px] italic font-normal tracking-wide">
 										Please review your registration details before submitting
 									</p>
 									{/* Privacy checkbox */}
-									<label htmlFor="privacy">
+									<label htmlFor="privacy" className="flex ">
 										<input
 											id="privacy"
 											type="checkbox"
@@ -295,14 +289,14 @@ const Register = () => {
 											className={checkBoxClassName}
 											onChange={handleOnChange}
 										/>
-										<span className="ml-2">
+										<span className="ml-2 text-[13px] max-sm:text-left">
 											I agreed with the event terms and conditions and privacy
 											policy
 										</span>
 									</label>
 								</div>
 
-								<div className=" w-full flex relative">
+								<div className=" sm:w-full flex relative">
 									{isLoading && (
 										<div className="absolute top-1/2 left-1/2 transform -translate-x-[50%] -translate-y-1/2">
 											<LoadingSpinner />

@@ -71,7 +71,7 @@ export const Nav = ({
 					</div>
 					<Link href="/contact?path=register" className="">
 						{path === "register" ? (
-							<div className="register  p-[2px] rounded-lg font-medium  text-lg tracking-wide ">
+							<div className="register  p-[2px] rounded-lg font-medium  text-lg tracking-wide cursor-not-allowed opacity-50">
 								<button className="bg-secondary py-[14px] px-[40px] rounded-lg  w-full text-white">
 									Register
 								</button>
@@ -122,10 +122,14 @@ export const Nav = ({
 							<Link
 								href="/contact?path=register"
 								onClick={() => setIsMenu(!isMenu)}
+								role="button"
 							>
 								{path === "register" ? (
-									<div className="register  p-[2px] rounded-lg font-medium  text-lg tracking-wide w-fit">
-										<button className="bg-secondary py-[14px] rounded-lg  px-8 text-white">
+									<div className="register  p-[2px] rounded-lg font-medium  text-lg tracking-wide w-fit cursor-not-allowed opacity-50">
+										<button
+											disabled={path === "register" ? true : false}
+											className="bg-secondary py-[14px] rounded-lg  px-8 text-white"
+										>
 											Register
 										</button>
 									</div>
