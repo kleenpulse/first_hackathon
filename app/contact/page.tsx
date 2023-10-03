@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/btn/Button";
 import { Nav } from "@/components/navigations/Nav";
-import Register from "@/components/sections/Register";
+import Register from "@/components/sections/register/Register";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 

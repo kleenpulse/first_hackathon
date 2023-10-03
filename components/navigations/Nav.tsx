@@ -40,7 +40,9 @@ export const Nav = ({
 
 	return (
 		<nav
-			className={`flex w-full ${navPadding} max-container min-[1440px]:px-0 px-2 sm:px-8`}
+			className={`flex w-full ${navPadding} max-container min-[1440px]:px-0 px-2 sm:px-8 ${
+				pathname?.includes("contact") ? "!py-4" : ""
+			}`}
 		>
 			<div className="flex justify-evenly items-center w-full ">
 				<div className="flex w-full">

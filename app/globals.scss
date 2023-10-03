@@ -309,3 +309,14 @@ input[type="number"]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+span.movement {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	right: 3rem;
+	top: -1rem;
+}
+
+.success-modal {
+	overflow: hidden !important;
+}
