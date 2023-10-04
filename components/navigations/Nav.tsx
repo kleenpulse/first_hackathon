@@ -69,17 +69,22 @@ export const Nav = ({
 							</Link>
 						))}
 					</div>
-					<Link href="/contact?path=register" className="">
-						{path === "register" ? (
-							<div className="register  p-[2px] rounded-lg font-medium  text-lg tracking-wide cursor-not-allowed opacity-50">
-								<button className="bg-secondary py-[14px] px-[40px] rounded-lg  w-full text-white">
-									Register
-								</button>
-							</div>
-						) : (
+					{path === "register" ? (
+						<div className="register  p-[2px] rounded-lg font-medium  text-lg tracking-wide cursor-not-allowed ">
+							<button
+								disabled={path === "register" ? true : false}
+								className={`bg-secondary py-[14px] px-[40px] rounded-lg  w-full text-white ${
+									path === "register" ? "cursor-not-allowed" : ""
+								}`}
+							>
+								Register
+							</button>
+						</div>
+					) : (
+						<Link href="/contact?path=register" role="button" prefetch>
 							<Button text="Register" />
-						)}
-					</Link>
+						</Link>
+					)}
 				</div>
 
 				<div className=" lg:hidden flex w-full justify-end relative">

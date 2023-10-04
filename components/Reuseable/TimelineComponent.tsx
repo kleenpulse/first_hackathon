@@ -22,9 +22,9 @@ export const TimelineComponent = ({
 	const [windowSize, setWindowSize] = useState(768);
 	const ref = useRef(null);
 
-	const isView = true;
+	// const isView = true;
 
-	// const isView = useInView(ref);
+	const isView = useInView(ref);
 
 	useEffect(() => {
 		const handleWindowResize = () => {

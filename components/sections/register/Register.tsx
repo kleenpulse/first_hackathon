@@ -2,7 +2,7 @@
 import Button from "@/components/btn/Button";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { checkBoxClassName } from "./className";
 import LoadingSpinner from "@/components/loaders/LoadingSpinner";
 import { useRouter } from "next/navigation";
@@ -83,19 +83,30 @@ const Register = () => {
 			console.log(error);
 		} finally {
 			setIsLoading(false);
-			if (Object.keys(isResult).length === 1) {
-				setIsError(true);
-			}
-			if (Object.keys(isResult).length > 1) {
-				setTimeout(() => {
-					setFormData(initialFormData);
-					setIsChecked(false);
-					setIsSuccess(true);
-					route.refresh();
-				}, 1000);
-			}
 		}
+		console.log(isResult, "========", Object.keys(isResult).length);
+		console.log(Array.isArray(isResult), "========", isResult);
 	};
+	useEffect(() => {
+		if (
+			Object.keys(isResult).length === 10 ||
+			Object.keys(isResult).find((key) => isResult[key].length === "id")
+		) {
+			setTimeout(() => {
+				setFormData(initialFormData);
+				setIsChecked(false);
+				setIsSuccess(true);
+				route.refresh();
+			}, 10);
+			return;
+		}
+		if (Object.keys(isResult).length === 1) {
+			setTimeout(() => {
+				setIsError(true);
+			}, 100);
+			return;
+		}
+	}, [isResult]);
 
 	return (
 		<>
