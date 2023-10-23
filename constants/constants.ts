@@ -1,15 +1,15 @@
 export const navLinks: { title: string; tag: string }[] = [
 	{
-		title: "Timeline",
-		tag: "/#timeline",
-	},
-	{
 		title: "Overview",
 		tag: "/#overview",
 	},
 	{
 		title: "FAQs",
 		tag: "/#faqs",
+	},
+	{
+		title: "Timeline",
+		tag: "/#timeline",
 	},
 	{
 		title: "Contact",

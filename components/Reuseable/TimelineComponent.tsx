@@ -65,7 +65,11 @@ export const TimelineComponent = ({
 				)}
 			</div>
 
-			<div className=" bg-primary w-[5px] h-auto mx-4 mr-6 sm:mx-8 lg:mx-16 flex items-center relative">
+			<div
+				className={` bg-primary w-[5px] ${
+					isView ? "height" : "not-height"
+				} mx-4 mr-6 sm:mx-8 lg:mx-16 flex items-center relative`}
+			>
 				<span
 					className={`absolute text-white font-medium text-xl h-10 w-10 flex items-center justify-center btn-gradient rounded-full translate-x-[-50%]  ${
 						isALT && isLast
