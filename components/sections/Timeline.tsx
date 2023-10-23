@@ -1,3 +1,5 @@
+"use client";
+
 import { items } from "@/constants/constants";
 import { TimelineComponent } from "../Reuseable/TimelineComponent";
 

@@ -1,23 +1,18 @@
 "use client";
-import { useEffect, useState, useMemo, RefObject, useRef } from "react";
+import { useEffect, useState, RefObject, useRef } from "react";
 
 export type UseInView = <T extends Element>(ref: RefObject<T>) => boolean;
 
 const useInView: UseInView = (ref) => {
 	const [isViewing, setIsViewing] = useState(false);
 
-	const observer = useMemo(
-		() =>
-			new IntersectionObserver(([entries]) => {
-				if (entries && entries) {
-					// Check if entries array and first entry exist
-					setIsViewing(entries.isIntersecting);
-				}
-			}),
-		[]
-	);
-
 	useEffect(() => {
+		const observer = new IntersectionObserver(([entries]) => {
+			if (entries && entries) {
+				// Check if entries array and first entry exist
+				setIsViewing(entries.isIntersecting);
+			}
+		});
 		const currentRef = ref.current;
 		if (currentRef) {
 			observer.observe(currentRef);
@@ -25,7 +20,7 @@ const useInView: UseInView = (ref) => {
 				observer.unobserve(currentRef);
 			};
 		}
-	}, [ref, observer]);
+	}, [ref]);
 
 	return isViewing;
 };

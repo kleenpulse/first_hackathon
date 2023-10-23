@@ -1,8 +1,6 @@
 "use client";
 // import { useInView } from "@/hooks/useInView";
-import { useEffect, useState, useRef } from "react";
-
-import dynamic from "next/dynamic";
+import { useRef } from "react";
 
 import useWindowSize from "react-use/lib/useWindowSize";
 import useInView from "@/hooks/useInView";
