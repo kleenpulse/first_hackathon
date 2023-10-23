@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../btn/Button";
+import Link from "next/link";
 
 export const Hero = () => {
 	return (
@@ -53,9 +54,9 @@ export const Hero = () => {
 					Participate in getlinked tech Hackathon 2023 stand a chance to win a
 					Big prize
 				</p>
-				<div>
+				<Link href="/contact?path=register">
 					<Button text="Register" />
-				</div>
+				</Link>
 				<p className="font-unica text-white text-[64px]">
 					00<span className="text-[12px]">H</span> 00
 					<span className="text-[12px]">M</span> 00

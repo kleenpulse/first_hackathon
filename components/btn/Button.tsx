@@ -4,12 +4,14 @@ export default function Button({
 	disabled = false,
 	fullWidth = false,
 	loading = false,
+	image,
 }: {
 	text: string;
 	type?: "button" | "submit" | "reset";
 	disabled?: boolean;
 	fullWidth?: boolean;
 	loading?: boolean;
+	image?: string;
 }) {
 	return (
 		<button
@@ -19,6 +21,7 @@ export default function Button({
 				(disabled || loading) && "opacity-50 cursor-not-allowed"
 			} ${fullWidth ? "w-full" : ""}`}
 		>
+			{image && <img src={image} alt="loading" className="w-6 h-6" />}
 			{text}
 		</button>
 	);

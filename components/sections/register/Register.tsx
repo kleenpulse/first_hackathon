@@ -186,7 +186,7 @@ const Register = () => {
 											id="phone"
 											type="number"
 											value={formData.phone}
-											placeholder="Your Team Name"
+											placeholder="Your Phone Number"
 											name="phone"
 											required
 											pattern="^[+]?[0-9]{10,15}$"

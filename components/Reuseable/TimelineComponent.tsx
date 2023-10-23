@@ -1,6 +1,11 @@
 "use client";
-import { useInView } from "@/hooks/useInView";
+// import { useInView } from "@/hooks/useInView";
 import { useEffect, useState, useRef } from "react";
+
+import dynamic from "next/dynamic";
+
+import useWindowSize from "react-use/lib/useWindowSize";
+import useInView from "@/hooks/useInView";
 
 interface Props {
 	cardTitle: string;
@@ -19,32 +24,15 @@ export const TimelineComponent = ({
 	last,
 	isALT = true,
 }: Props) => {
-	const [windowSize, setWindowSize] = useState(768);
+	const { width } = useWindowSize();
 	const ref = useRef(null);
 
 	// const isView = true;
 
 	const isView = useInView(ref);
 
-	useEffect(() => {
-		const handleWindowResize = () => {
-			if (typeof window !== "undefined") {
-				setWindowSize(window.innerWidth);
-			}
-		};
-
-		if (typeof window !== "undefined") {
-			window.addEventListener("resize", handleWindowResize);
-		}
-
-		handleWindowResize();
-
-		return () => {
-			window.removeEventListener("resize", handleWindowResize);
-		};
-	}, []);
 	const isLast = index === last;
-	if (isALT && windowSize <= 768) {
+	if (isALT && width <= 768) {
 		isALT = false;
 	}
 

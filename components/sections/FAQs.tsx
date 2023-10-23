@@ -73,7 +73,6 @@ export const FAQs = () => {
 							alt="judging"
 							width={800}
 							height={800}
-							layout="responsive"
 						/>
 					</div>
 				</div>

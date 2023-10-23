@@ -5,7 +5,7 @@ import Button from "../btn/Button";
 
 interface ErrorCardProps {
 	setError: Dispatch<SetStateAction<boolean>>;
-	email: string;
+	email?: string;
 	message: string | undefined;
 }
 const ErrorCard: React.FC<ErrorCardProps> = ({ setError, email, message }) => {
@@ -20,9 +20,12 @@ const ErrorCard: React.FC<ErrorCardProps> = ({ setError, email, message }) => {
 					<p className="text-white sm:text-xl font-medium lg:text-2xl uppercase md:font-bold tracking-wider max-sm:mt-3">
 						{message}
 					</p>
-					<p className="text-white font-montserrat text-lg">
-						Email: <span>{email}</span>
-					</p>
+
+					{email && (
+						<p className="text-white font-montserrat text-lg">
+							Email: <span>{email}</span>
+						</p>
+					)}
 				</div>
 
 				<div

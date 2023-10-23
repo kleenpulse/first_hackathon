@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState, useMemo, RefObject, useRef } from "react";
 
-type UseInView = <T extends Element>(ref: RefObject<T>) => boolean;
+export type UseInView = <T extends Element>(ref: RefObject<T>) => boolean;
 
-export const useInView: UseInView = (ref) => {
+const useInView: UseInView = (ref) => {
 	const [isViewing, setIsViewing] = useState(false);
 
 	const observer = useMemo(
@@ -29,3 +29,5 @@ export const useInView: UseInView = (ref) => {
 
 	return isViewing;
 };
+
+export default useInView;
